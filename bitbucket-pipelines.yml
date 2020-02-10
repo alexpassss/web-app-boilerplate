@@ -1,0 +1,25 @@
+image: node:8.13.0
+pipelines:
+   branches:
+      master:
+      - step:
+         deployment: production
+         caches:
+         - node
+         script:
+         - git submodule update --init
+         - npm install -g firebase-tools
+         - npm install
+         - npm run build
+         - firebase deploy --token="$FIREBASE_TOKEN" --project worktube-v3-app --non-interactive
+      staging:
+      - step:
+         deployment: staging
+         caches:
+         - node
+         script:
+         - git submodule update --init
+         - npm install -g firebase-tools
+         - npm install
+         - npm run build
+         - firebase deploy --token="$FIREBASE_TOKEN" --project dev-worktube-v3-app --non-interactive
