@@ -11,7 +11,7 @@ pipelines:
          - npm install -g firebase-tools
          - npm install
          - npm run build
-         - firebase deploy --token="$FIREBASE_TOKEN" --project worktube-v3-app --non-interactive
+         - firebase deploy --token="$FIREBASE_TOKEN" --project project-name --non-interactive
       staging:
       - step:
          deployment: staging
@@ -22,4 +22,4 @@ pipelines:
          - npm install -g firebase-tools
          - npm install
          - npm run build
-         - firebase deploy --token="$FIREBASE_TOKEN" --project dev-worktube-v3-app --non-interactive
+         - firebase deploy --token="$FIREBASE_TOKEN" --project project-name --non-interactive
