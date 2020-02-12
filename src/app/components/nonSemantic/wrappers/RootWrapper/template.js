@@ -5,7 +5,7 @@ const Template = ({ children }) => {
   return (
     <React.Fragment>
       <MainHeader />
-      <main>{children}</main>
+      {children}
     </React.Fragment>
   )
 }
