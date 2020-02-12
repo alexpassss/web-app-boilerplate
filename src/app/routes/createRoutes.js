@@ -14,7 +14,9 @@ import {
   AdminPanelRoute,
   DashboardRoute,
   StyleguideRoute,
-  UserProfileRoute
+  UserEditRoute,
+  UserListRoute,
+  UserViewRoute
 } from './index'
 
 export default function createRoutes(store) {
@@ -22,11 +24,23 @@ export default function createRoutes(store) {
     <RootWrapper>
       <History>
         <Switch>
+          {/* Service routes */}
           <Route
             exact
             path={PermissionDenied.path}
             component={PermissionDenied.component}
           />
+          <ProtectedRoute
+            exact
+            path={PermissionDenied.path}
+            component={PermissionDenied.component}
+          />
+          <Route
+            exact
+            path={AppNavigator.path}
+            component={AppNavigator.component}
+          />
+          {/* Auth routes */}
           <UnauthenticatedRoute
             exact
             path={SignupRoute.path}
@@ -42,31 +56,35 @@ export default function createRoutes(store) {
             path={ForgotPasswordRoute.path}
             component={ForgotPasswordRoute.component}
           />
-          <ProtectedRoute
-            exact
-            path={PermissionDenied.path}
-            component={PermissionDenied.component}
-          />
-          <Route
-            exact
-            path={AppNavigator.path}
-            component={AppNavigator.component}
-          />
+          {/* Admin panel */}
           <Route
             exact
             path={AdminPanelRoute.path}
             component={AdminPanelRoute.component}
           />
+          {/* Dashboard */}
           <Route
             exact
             path={DashboardRoute.path}
             component={DashboardRoute.component}
           />
+          {/* User */}
           <Route
             exact
-            path={UserProfileRoute.path}
-            component={UserProfileRoute.component}
+            path={UserEditRoute.path}
+            component={UserEditRoute.component}
           />
+          <Route
+            exact
+            path={UserListRoute.path}
+            component={UserListRoute.component}
+          />
+          <Route
+            exact
+            path={UserViewRoute.path}
+            component={UserViewRoute.component}
+          />
+          {/* Styleguide */}
           <Route
             exact
             path={StyleguideRoute.path}

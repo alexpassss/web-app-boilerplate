@@ -4,4 +4,7 @@ export const FORGOT_PASSWORD_PATH = '/forgot-password'
 export const ADMIN_PANEL_PATH = '/admin-panel'
 export const DASHBOARD_PATH = '/dashboard'
 export const STYLEGUIDE_PATH = '/styleguide'
-export const USER_PROFILE_PATH = '/profile/:id'
+// User
+export const USERS_LIST_PATH = '/users'
+export const USER_VIEW_PATH = '/users/:id'
+export const USER_EDIT_PATH = '/users/:id/edit'

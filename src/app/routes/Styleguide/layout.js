@@ -10,6 +10,7 @@ import Radio from '@material-ui/core/Radio'
 import Switch from '@material-ui/core/Switch'
 import { Add } from '@material-ui/icons'
 import TextField from '@material-ui/core/TextField'
+import { PageHeader } from '../../components'
 
 const drawerWidth = 240
 
@@ -28,8 +29,7 @@ const useStyles = makeStyles(theme => ({
     width: drawerWidth
   },
   content: {
-    flexGrow: 1,
-    padding: theme.spacing(3)
+    flexGrow: 1
   },
   toolbar: theme.mixins.toolbar
 }))
@@ -41,13 +41,8 @@ export default function ClippedDrawer() {
     <div className={classes.root}>
       <CssBaseline />
       <main className={classes.content}>
-        <div className={classes.toolbar} />
+        <PageHeader title="UI styleguide" />
         <Container>
-          <Row>
-            <Col className="mt-2 mb-5">
-              <Typography variant="h3">UI styleguide</Typography>
-            </Col>
-          </Row>
           <Row className="mb-5">
             <Col id="buttons" xs={12} className="mb-3">
               <Typography variant="h5">Buttons</Typography>

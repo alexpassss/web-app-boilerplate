@@ -14,7 +14,9 @@ import {
   ListItemIcon,
   ListItemText
 } from '@material-ui/core'
-import { People } from '@material-ui/icons'
+import { Link as RouterLink } from 'react-router-dom'
+import { People, Palette } from '@material-ui/icons'
+import { STYLEGUIDE_PATH } from '../paths'
 
 const Layout = () => {
   return (
@@ -34,6 +36,12 @@ const Layout = () => {
                 <People />
               </ListItemIcon>
               <ListItemText primary="Users" />
+            </ListItem>
+            <ListItem button component={RouterLink} to={STYLEGUIDE_PATH}>
+              <ListItemIcon>
+                <Palette />
+              </ListItemIcon>
+              <ListItemText primary="Styleguide" />
             </ListItem>
           </List>
         </SidebarPrimary>
