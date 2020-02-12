@@ -9,7 +9,12 @@ import {
   UnauthenticatedRoute,
   LoginRoute,
   SignupRoute,
-  NotFoundRoute
+  ForgotPasswordRoute,
+  NotFoundRoute,
+  AdminPanelRoute,
+  DashboardRoute,
+  StyleguideRoute,
+  UserProfileRoute
 } from './index'
 
 export default function createRoutes(store) {
@@ -32,6 +37,11 @@ export default function createRoutes(store) {
             path={LoginRoute.path}
             component={LoginRoute.component}
           />
+          <UnauthenticatedRoute
+            exact
+            path={ForgotPasswordRoute.path}
+            component={ForgotPasswordRoute.component}
+          />
           <ProtectedRoute
             exact
             path={PermissionDenied.path}
@@ -41,6 +51,26 @@ export default function createRoutes(store) {
             exact
             path={AppNavigator.path}
             component={AppNavigator.component}
+          />
+          <Route
+            exact
+            path={AdminPanelRoute.path}
+            component={AdminPanelRoute.component}
+          />
+          <Route
+            exact
+            path={DashboardRoute.path}
+            component={DashboardRoute.component}
+          />
+          <Route
+            exact
+            path={UserProfileRoute.path}
+            component={UserProfileRoute.component}
+          />
+          <Route
+            exact
+            path={StyleguideRoute.path}
+            component={StyleguideRoute.component}
           />
           <Route component={NotFoundRoute.component} />
         </Switch>

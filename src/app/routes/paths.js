@@ -1,3 +1,7 @@
 export const LOGIN_PATH = '/'
 export const SIGNUP_PATH = '/signup'
 export const FORGOT_PASSWORD_PATH = '/forgot-password'
+export const ADMIN_PANEL_PATH = '/admin-panel'
+export const DASHBOARD_PATH = '/dashboard'
+export const STYLEGUIDE_PATH = '/styleguide'
+export const USER_PROFILE_PATH = '/profile/:id'

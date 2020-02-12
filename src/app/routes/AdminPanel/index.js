@@ -1,5 +1,5 @@
 import Layout from './layout'
-import { LOGIN_PATH as path } from '../../paths'
+import { ADMIN_PANEL_PATH as path } from '../paths'
 import { withRouter } from 'react-router-dom'
 
 export default {

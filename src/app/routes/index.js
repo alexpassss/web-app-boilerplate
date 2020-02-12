@@ -9,3 +9,8 @@ export { default as ProtectedRoute } from './ProtectedRoute'
 export { default as LoginRoute } from './auth/Login'
 export { default as SignupRoute } from './auth/Signup'
 export { default as ForgotPasswordRoute } from './auth/ForgotPassword'
+
+export { default as AdminPanelRoute } from './AdminPanel'
+export { default as DashboardRoute } from './Dashboard'
+export { default as UserProfileRoute } from './UserProfile'
+export { default as StyleguideRoute } from './Styleguide'
