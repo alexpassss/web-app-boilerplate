@@ -1,3 +1,5 @@
 export { default as RootWrapper } from './nonSemantic/wrappers/RootWrapper'
 export { default as LoadingSpinner } from './nonSemantic/spinners/LoadingSpinner'
 export { default as MainHeader } from './nonSemantic/headers/MainHeader'
+export { default as CopyrightPrimary } from './nonSemantic/copyrights/CopyrightPrimary'
+export { default as AlertPrimary } from './nonSemantic/alerts/AlertPrimary'

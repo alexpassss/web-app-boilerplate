@@ -10,8 +10,6 @@ import Grid from '@material-ui/core/Grid'
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import Typography from '@material-ui/core/Typography'
 import Snackbar from '@material-ui/core/Snackbar'
-import MuiAlert from '@material-ui/lab/Alert'
-import { makeStyles } from '@material-ui/core/styles'
 import GoogleButton from 'react-google-button'
 import { useFirebase, useFirestore } from 'react-redux-firebase'
 import {
@@ -19,56 +17,8 @@ import {
   SIGNUP_PATH,
   FORGOT_PASSWORD_PATH
 } from '../../paths'
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  )
-}
-
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />
-}
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    height: '100vh'
-  },
-  image: {
-    backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'dark'
-        ? theme.palette.grey[900]
-        : theme.palette.grey[50],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1)
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2)
-  }
-}))
+import { CopyrightPrimary, AlertPrimary } from '../../../components'
+import useStyles from './styles'
 
 function Layout(props) {
   const classes = useStyles()
@@ -129,9 +79,11 @@ function Layout(props) {
         autoHideDuration={6000}
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         onClose={() => setErrorVisibility(false)}>
-        <Alert onClose={() => setErrorVisibility(false)} severity="error">
+        <AlertPrimary
+          onClose={() => setErrorVisibility(false)}
+          severity="error">
           {errorMsg}
-        </Alert>
+        </AlertPrimary>
       </Snackbar>
       <Box className="container-fluid">
         <Box className={classes.root + ' row'}>
@@ -216,7 +168,10 @@ function Layout(props) {
                   </Grid>
                 </Grid>
                 <Box mt={5}>
-                  <Copyright />
+                  <CopyrightPrimary
+                    name={'Web app boilerplate'}
+                    url={'https://google.com'}
+                  />
                 </Box>
               </form>
             </div>
