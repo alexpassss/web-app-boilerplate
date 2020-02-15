@@ -1,4 +1,4 @@
-import { colorDark, offset } from '../../../../styles/theme'
+import { colorDark } from '../../../../styles/theme'
 
 const styles = {
   scrollableWrapper: {

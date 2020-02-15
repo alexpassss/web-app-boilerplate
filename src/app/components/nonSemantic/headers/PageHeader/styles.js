@@ -1,9 +1,4 @@
-import {
-  colorWhite,
-  border,
-  iconSize,
-  colorDark
-} from '../../../../styles/theme'
+import { iconSize, colorDark } from '../../../../styles/theme'
 
 const styles = {
   animated: {

@@ -13,7 +13,6 @@ import {
   NotFoundRoute,
   AdminPanelRoute,
   DashboardRoute,
-  StyleguideRoute,
   UserEditRoute,
   UserListRoute,
   UserViewRoute
@@ -58,7 +57,6 @@ export default function createRoutes(store) {
           />
           {/* Admin panel */}
           <Route
-            exact
             path={AdminPanelRoute.path}
             component={AdminPanelRoute.component}
           />
@@ -83,12 +81,6 @@ export default function createRoutes(store) {
             exact
             path={UserViewRoute.path}
             component={UserViewRoute.component}
-          />
-          {/* Styleguide */}
-          <Route
-            exact
-            path={StyleguideRoute.path}
-            component={StyleguideRoute.component}
           />
           <Route component={NotFoundRoute.component} />
         </Switch>

@@ -42,7 +42,7 @@ export default function ClippedDrawer() {
       <CssBaseline />
       <main className={classes.content}>
         <PageHeader title="UI styleguide" />
-        <Container>
+        <Container fluid>
           <Row className="mb-5">
             <Col id="buttons" xs={12} className="mb-3">
               <Typography variant="h5">Buttons</Typography>

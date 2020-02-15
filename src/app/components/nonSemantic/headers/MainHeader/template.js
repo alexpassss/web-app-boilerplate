@@ -48,6 +48,11 @@ export default function Template() {
     setAnchorEl(null)
   }
 
+  const openProfile = () => {
+    handleClose()
+    history.push(`/users/${auth.uid}`)
+  }
+
   function logout() {
     return firebase.logout().then(() => {
       handleClose()
@@ -91,7 +96,7 @@ export default function Template() {
                   }}
                   open={open}
                   onClose={handleClose}>
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
+                  <MenuItem onClick={openProfile}>Profile</MenuItem>
                   <MenuItem onClick={logout}>Logout</MenuItem>
                 </Menu>
               </div>
