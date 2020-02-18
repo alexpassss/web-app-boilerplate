@@ -8,10 +8,8 @@ const Helper = props => {
   useFirestoreConnect([{ collection: collection }])
 
   const list = useSelector(state => {
-    return state.firestore.data && state.firestore.data[collection]
+    return state.firestore.ordered && state.firestore.ordered[collection]
   })
-
-  console.log('helper >', list)
 
   return (
     <React.Fragment>

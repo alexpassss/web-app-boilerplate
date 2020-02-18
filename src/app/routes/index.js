@@ -17,3 +17,16 @@ export { default as StyleguideRoute } from './Styleguide'
 export { default as UserEditRoute } from './user/Edit'
 export { default as UserListRoute } from './user/List'
 export { default as UserViewRoute } from './user/View'
+
+
+// Project
+export { default as ProjectCreateRoute } from './project/Create'
+export { default as ProjectEditRoute } from './project/Edit'
+export { default as ProjectListRoute } from './project/List'
+export { default as ProjectViewRoute } from './project/View'
+
+// Experience
+export { default as ExperienceCreateRoute } from './experience/Create'
+export { default as ExperienceEditRoute } from './experience/Edit'
+export { default as ExperienceListRoute } from './experience/List'
+export { default as ExperienceViewRoute } from './experience/View'

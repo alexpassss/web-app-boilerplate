@@ -13,10 +13,11 @@ import {
   ListItemText
 } from '@material-ui/core'
 import { Link as RouterLink } from 'react-router-dom'
-import { People, Palette } from '@material-ui/icons'
+import { People, Palette, Book } from '@material-ui/icons'
 import { Switch, Route } from 'react-router-dom'
 import { UserListRoute, StyleguideRoute } from '../index'
 import { ADMIN_USERS_PATH, ADMIN_STYLEGUIDE_PATH } from '../paths'
+import * as MENU from './menu'
 
 const Layout = () => {
   return (
@@ -44,6 +45,29 @@ const Layout = () => {
               <ListItemText primary="Styleguide" />
             </ListItem>
           </List>
+          {!!Object.values(MENU).length && (
+            <List
+              component="nav"
+              aria-labelledby="nested-list-subheader"
+              subheader={
+                <ListSubheader component="div" id="nested-list-subheader">
+                  Entities
+                </ListSubheader>
+              }>
+              {Object.values(MENU).map((menuItem, index) => (
+                <ListItem
+                  key={'entity-' + index}
+                  button
+                  component={RouterLink}
+                  to={menuItem.path}>
+                  <ListItemIcon>
+                    <Book />
+                  </ListItemIcon>
+                  <ListItemText primary={menuItem.name} />
+                </ListItem>
+              ))}
+            </List>
+          )}
         </SidebarPrimary>
         <ContentWrapper>
           <ScrollableWrapper>
